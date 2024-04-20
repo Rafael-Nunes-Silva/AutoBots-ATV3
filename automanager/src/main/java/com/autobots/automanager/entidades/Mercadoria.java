@@ -14,7 +14,7 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Mercadoria extends RepresentationModel<Mercadoria>  {
+public class Mercadoria extends RepresentationModel<Mercadoria> {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;

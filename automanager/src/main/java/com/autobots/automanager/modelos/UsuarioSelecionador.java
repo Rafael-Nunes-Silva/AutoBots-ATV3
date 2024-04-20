@@ -13,6 +13,7 @@ public class UsuarioSelecionador {
 		for (Usuario usuario : usuarios) {
 			if (usuario.getId() == id) {
 				selecionado = usuario;
+				break;
 			}
 		}
 		return selecionado;

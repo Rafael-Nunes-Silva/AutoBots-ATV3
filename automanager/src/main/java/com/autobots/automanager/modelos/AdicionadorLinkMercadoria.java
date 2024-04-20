@@ -11,14 +11,14 @@ import com.autobots.automanager.entidades.Mercadoria;
 public class AdicionadorLinkMercadoria implements AdicionadorLink<Mercadoria> {
 	@Override
 	public void adicionarLink(List<Mercadoria> lista) {
-		for (Mercadoria venda : lista) {
-			long id = venda.getId();
+		for (Mercadoria mercadoria : lista) {
+			long id = mercadoria.getId();
 			Link linkProprio = WebMvcLinkBuilder
 					.linkTo(WebMvcLinkBuilder
 							.methodOn(MercadoriaControle.class)
 							.obterMercadoria(id))
 					.withSelfRel();
-			venda.add(linkProprio);
+			mercadoria.add(linkProprio);
 		}
 	}
 
